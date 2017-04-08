@@ -9,6 +9,7 @@ var path = require('path');
 var async = require('async');
 var socketio = require('socket.io');
 var express = require('express');
+var request = require('request');
 
 //
 // ## SimpleServer `SimpleServer(obj)`
