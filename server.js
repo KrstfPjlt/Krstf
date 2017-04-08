@@ -79,6 +79,21 @@ function broadcast(event, data) {
   });
 }
 
+
+
+router.get('/meteo', function (req, res) {
+  request.get('http://google.caca/img.png')
+  .on('response', function(response) {
+    res.send('Hello World');
+    console.log(response.statusCode) // 200 
+    console.log(response.headers['content-type']) // 'image/png' 
+  })
+  .on('error', function(err) {
+    res.send('Shit');
+    console.log(err)
+  });
+})
+
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
   console.log("Chat server listening at", addr.address + ":" + addr.port);
