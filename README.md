@@ -1,2 +1,0 @@
-# Krstf
-Krstf Project
